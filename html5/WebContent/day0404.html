@@ -1,0 +1,40 @@
+<!DOCTYPE html>	/*시멘틱구조 - 검색에 노출이 더 잘 되려면 사용 권장(봇)  0404*/
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		width: 200px;
+		height: 200px;
+	}
+	
+	#box1 {
+		background: yellow;
+		visibility:hidden;	/*visibility:hidden을 사용하면 볼순없어도
+										  그자리크기가 안보이게 차지하고있음*/
+	}
+	
+	#box2 {
+		background: pink;
+	}
+</style>
+</head>
+<body>
+	<header></header>
+	<nav></nav>
+	<section>
+	<div id="box1"></div>
+	<div id="box2"></div>
+	</section>
+	<section>	/*section 안에 sectio 못들어가고 article안에 article 못들어감. 번갈아 넣어야됨*/
+		<article>
+			<section></section>
+		</article>
+		<article></article>
+		<article></article>
+	</section>
+	<section></section>
+	<footer></footer>
+</body>
+</html>
