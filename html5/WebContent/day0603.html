@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul>
+		<li>css</li>
+		<li>html</li>
+		<li>javascript</li>
+	</ul>
+	<script src="js/jquery-3.5.0.min.js"></script>
+	<script>
+		$(function(){
+			$("ul").append("<li>append</li>");
+			$("<li>appendTo</li>").appendTo("ul");
+			$("ul").prepend("<li>prepend</li>");
+			$("<li>prependTo</li>").prependTo("ul");
+			$("ul").before("<p>before</p>"); //외부 앞에 붙이는거
+			$("<li>insertBefore</li>").insertBefore("ul");
+			$("ul").after("<p>after</p>");	//외부 뒤에 붙이는거
+			$("<li>insertAfter</li>").insertAfter("ul");
+			$("li:eq(2)").appendTo("ul");
+			$("li:eq(2)").clone().prependTo("ul");
+			$("li;eq(3)").empty();	//내부 비울때
+			$("li;eq(3)").remove();	//태그 삭제시킬때
+		});
+	</script>
+</body>
+</html>
